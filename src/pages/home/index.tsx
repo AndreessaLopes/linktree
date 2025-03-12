@@ -1,4 +1,5 @@
 import { Social } from "../../components/Social";
+import logo from "../../assets/logo.png";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { db } from "../../services/firebaseConnection";
@@ -73,6 +74,12 @@ export function Home() {
     <div className="flex flex-col w-full py-4 items-center justify-center">
       <h1 className="md:text-4xl text-3xl font-bold text-white mt-20">
         Rosângela Lopes
+        
+      <p className="md:text-xl text-3xl font-bold mt-3 text-white flex flex-col items-center">
+        Terapeuta Holística
+      </p>
+        
+        {/* <img src={logo} alt="Logo" className="w-80 h-40 mb-7 mt-11" /> */}
       </h1>
       <span className="text-gray-50 mb-5 mt-3">Veja meus links 👇</span>
 
