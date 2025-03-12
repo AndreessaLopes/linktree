@@ -75,7 +75,7 @@ export function Home() {
       <h1 className="md:text-4xl text-3xl font-bold text-white mt-20">
         Rosângela Lopes
         
-      <p className="md:text-xl text-3xl font-bold mt-3 text-white flex flex-col items-center">
+      <p className="md:text-xl text-xl font-bold mt-3 text-white flex flex-col items-center">
         Terapeuta Holística
       </p>
         
