@@ -2,12 +2,12 @@ import { FormEvent, useEffect, useState } from "react";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { db } from "../../services/firebaseConnection";
-import { addDoc, setDoc, getDoc, doc } from "firebase/firestore";
+import {setDoc, getDoc, doc } from "firebase/firestore";
 
 export function Networks() {
   const [facebook, setFacebook] = useState("");
   const [instagram, setInstagram] = useState("");
-  const [youtube, setYoutube] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
 
   useEffect(() => {
     function loadLinks() {
@@ -17,7 +17,7 @@ export function Networks() {
           if (snapshot.data() != undefined) {
             setFacebook(snapshot.data()?.facebook);
             setInstagram(snapshot.data()?.instagram);
-            setYoutube(snapshot.data()?.youtube);
+            setWhatsapp(snapshot.data()?.whatsapp);
           }
         })
         .catch((error) => {
@@ -33,7 +33,7 @@ export function Networks() {
     setDoc(doc(db, "social", "link"), {
       facebook: facebook,
       instagram: instagram,
-      youtube: youtube,
+      whatsapp: whatsapp,
     })
       .then(() => {
         console.log("CADASTRADO COM SUCESSO");
@@ -73,13 +73,13 @@ export function Networks() {
         />
 
         <label className="text-white font-medium mt-2 mb-2">
-          Link do Youtube
+          Link do WhatsApp
         </label>
         <Input
-          placeholder="Digite a url do youtube"
+          placeholder="Digite a url do whatsapp"
           type="url"
-          value={youtube}
-          onChange={(e) => setYoutube(e.target.value)}
+          value={whatsapp}
+          onChange={(e) => setWhatsapp(e.target.value)}
         />
 
         <button
