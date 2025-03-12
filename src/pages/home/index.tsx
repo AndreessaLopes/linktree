@@ -1,5 +1,5 @@
 import { Social } from "../../components/Social";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { db } from "../../services/firebaseConnection";
